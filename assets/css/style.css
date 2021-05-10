@@ -1,0 +1,642 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'joystixmonospace';
+    src: url('../font/joystix_monospace-webfont.woff2') format('woff2'),
+         url('../font/joystix_monospace-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pacfontregular';
+    src: url("../font/pac-font-webfont.woff2") format('woff2'),
+         url('../font/pac-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'super_plumber_brothersregular';
+    src: url('../font/superplumberbrothers-y00v-webfont.woff2') format('woff2'),
+         url('../font/superplumberbrothers-y00v-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.visuel {
+    width: 100%;
+    height: 40%;
+    background:url("../images/bg_street.png")  ;
+    background-size: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.ending {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+}
+
+.endingWin {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    border: solid 5px gold;
+    font-size: 6em;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    font-family: "pacfontregular";
+}
+
+.endingLoose {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    border: solid 5px rgb(255, 8, 0);
+    font-size: 6em;
+    color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    font-family: "pacfontregular";
+}
+
+.word {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3em;
+}
+
+.invisible{
+    color: black;
+    display: inline;
+    justify-content: space-around;
+}
+
+.visible{
+    color: black;
+    display: inline;
+}
+
+.visuelcaseMario {
+    width: 10%;
+    height: 100%;
+    background:url("../images/d9zi3cq-4a9df83b-9a4a-43d6-b6d0-c79fe0956d1f-removebg-preview.png")  no-repeat  ;
+    background-size: 100%;
+    background-position-y: 100%;
+    position: relative;   
+    display: flex; 
+    justify-self: flex-start ;
+    transform: translateX(-300%)
+}
+
+.visuelcaseMarioFin {
+    width: 10%;
+    height: 100%;
+    background:url("../images/d9zi3cq-4a9df83b-9a4a-43d6-b6d0-c79fe0956d1f-removebg-preview.png")  no-repeat  ;
+    background-size: 100%;
+    background-position-y: 100%;
+    position: relative;   
+    display: flex; 
+    justify-self: flex-start ;
+    transform: translateX(-300%);
+    animation: marioFin 2s
+}
+
+.visuelcaseVirusAnimeTouche {
+    width: 10%;
+    height: 100%;
+    background: url("../images/virus_2-removebg-preview.png") no-repeat ;
+    background-size: 75%;
+    position: relative;
+    background-position-y: 100%;
+    transform: translateX(350%);
+    animation: virusTouch .15s 
+}
+
+@keyframes virusTouch {
+    0%{
+    }
+    100% {
+        background-position-y: 60%;
+    }
+}
+    
+.marioMissing {
+    background: url("");
+}
+.virusMissing {
+    background: url("");
+}
+
+.visuelcaseVirus {
+    width: 10%;
+    height: 100%;
+    background: url("../images/virus_2-removebg-preview.png") no-repeat ;
+    background-size: 75%;
+    position: relative;
+    background-position-y: 100%;
+    transform: translateX(350%);
+}
+
+.visuelcaseVirusAnime {
+    width: 10%;
+    height: 100%;
+    background: url("../images/virus_2-removebg-preview.png") no-repeat ;
+    background-size: 75%;
+    position: relative;
+    background-position-y: 100%;
+    transform: translateX(350%);
+    animation: virus 3.5s 
+}
+
+.visuelcaseVirusFin {
+    width: 10%;
+    height: 100%;
+    background: url("../images/reExplosion-removebg-preview.png") no-repeat ;
+    background-size: 100%;
+    position: relative;
+    background-position-y: 100%;
+    transform: translateX(350%);
+    
+}
+
+.pilulle {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+}
+
+.pilulleLoose{
+    height: 40px;
+    width: 37px;
+    background:url("") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+}
+
+.pilulleAnime7 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule7 3s 
+}
+
+.pilulleAnime6 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule6 3s 
+}
+
+.pilulleAnime5 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule5 3s 
+}
+
+.pilulleAnime4 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule4 3s 
+}
+
+.pilulleAnime3 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule3 3s 
+}
+
+.pilulleAnime2 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule2 3s 
+}
+
+.pilulleAnime1 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule1 3s 
+}
+
+.pilulleAnime0 {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pillule0 3s 
+}
+
+.pilulleAnimeTouche {
+    height: 40px;
+    width: 37px;
+    background:url("../images/pilule-removebg-preview.png") no-repeat ;
+    position: relative;
+   background-size: 100%;
+   transform: translateX(-1630%);
+  background-position-y: 100%;
+  margin-top: 7%;
+  animation: pilluleTouche 3s 
+}
+
+
+
+@keyframes pillule7 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(700%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule6 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(1300%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule5 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(-600%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule4 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(900%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule3 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(-200%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule2 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(600%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule1 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(-800%) rotateZ(1920deg)
+    } 
+}
+
+@keyframes pillule0 {
+    0% {
+
+    }
+    100% {
+        transform: translateX(2100%) rotateZ(1920deg);
+        height: 75px;
+        height: 70px;
+        background-size: 100%;
+        background-image: url("../images/reExplosion-removebg-preview.png");
+    } 
+}
+
+@keyframes pilluleTouche {
+    0% {
+
+    }
+    100% {
+        transform: translateX(2100%) rotateZ(1920deg);
+        
+    } 
+}
+
+
+
+@keyframes virus {
+    0% {
+    }
+    100% {
+        transform: translateX(-380%)
+    }
+}
+
+@keyframes marioFin {
+    0% {      
+    }
+    50% {
+        transform: rotateY(-180deg);
+    }
+    100% {
+        transform: translateX(-600%);
+    }
+
+}
+.life{
+    width: 15%;
+    height: 90%;
+    background: #313131;
+    display: flex;
+    
+    
+}
+.heart {
+    width: 60%;
+    height: 100%;
+    background: url("https://opengameart.org/sites/default/files/heart%20pixel%20art%20254x254.png") no-repeat;
+    background-size: 50%;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    
+    
+}
+
+
+
+.word {
+    width: 60%;
+    height: 90%;
+    background: ivory;
+    ;
+}
+
+.boxButton {
+    width: 100%;
+    height: 40%;
+    background: url("../images/bg_terrain_3.png");
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reset {
+    width: 10%;
+    height: 15%;
+    background: black;
+    justify-self: flex-end;
+    margin-left: 80%;
+    margin-top: 3%; 
+}
+
+.boxLife {
+    width: 100%;
+    height: 10%;
+    background: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxWord {
+    width: 100%;
+    height: 10%;
+    background: url("../images/bg_terrain_middle.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+    border-radius: 10%;
+    font-size: 3em;
+    background: #313131;
+    box-shadow: 100px ;
+    color: ivory;
+    font-family: "joystixmonospace" ;
+}
+
+#buttonReset {
+    margin-left: 15%;
+    width: 10%;
+    font-family:"super_plumber_brothersregular";
+    background-color: rgb(177, 177, 177);
+    color: red;
+    font-size: 3em;
+}
+
+input {
+    width: 20%;
+    display: flex;
+    font-size: 4em;
+    align-items: center;
+    color: ivory;
+   background: #313131;
+}
+
+.egal {
+    width: 20%;
+    align-items: center;
+    font-size: 3em;
+    display: flex;
+    font-weight: bold;
+    color: ivory;
+}
+
+@media screen and (max-width: 768px) {
+
+    .visuel {
+        width: 100%;
+        height: 40%;
+        background-image: url("../images/bg\ mobile.png");
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+    button {
+        width: 30px;
+    height: 30px;
+    }
+    #buttonReset {
+        width: 40px;
+        margin-left: 15%;
+    }
+    .life {
+        width: 30%;
+        height: 30%;
+    }
+    button {
+        font-size: 1em;
+    }
+    #buttonReset {
+        width: 15%;
+    }
+    .heart {
+        background-size: 30%;
+    }
+    input {
+        font-size: 1em;
+    }
+    .egal{
+        font-size :1.5em;
+        font-weight: bold;
+    }
+    .ending {
+        width: 60%;
+        height: 20%;
+        position: absolute;
+        top: 5%;
+        left: 20%;
+    }
+    
+    .endingWin {
+        width: 40%;
+        height: 20%;
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        border: solid 5px gold;
+        font-size: 2em;
+        
+    }
+    
+    .endingLoose {
+        width: 40%;
+        height: 20%;
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        border: solid 5px rgb(255, 8, 0);
+        font-size: 2em;
+        color: rgb(255, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20%;
+    }
+    .word {
+        font-size: 1.7em;
+    }
+    .pilulle {
+        height: 20px;
+        width: 15px;
+    }
+    #buttonReset {
+        font-size: 1em;
+    }
+    .pilulle {
+        background: url("");
+    }
+    .pilulleAnime {
+        background: url("");
+    }
+    .pilulleAnime0 {
+        background: url("");
+    }
+    .pilulleAnime1 {
+        background: url("");
+    }
+    .pilulleAnime2 {
+        background: url("");
+    }
+    .pilulleAnime3 {
+        background: url("");
+    }
+    .pilulleAnime4 {
+        background: url("");
+    }
+    .pilulleAnime5 {
+        background: url("");
+    }
+    .pilulleAnime6 {
+        background: url("");
+    }
+    .pilulleAnime7 {
+        background: url("");
+    }
+}
